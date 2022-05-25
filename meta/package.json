@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "prebuild": "yarn submodule:get",
-    "build": "hugo",
+    "build": "node init && hugo",
     "prestart": "yarn submodule:get",
-    "start": "hugo server --baseURL http://127.0.0.1",
+    "start": "node init && hugo server --baseURL http://127.0.0.1",
     "submodule:get": "git submodule update --init --recursive --depth 1"
   },
   "devDependencies": {
